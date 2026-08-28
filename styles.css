@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f4f5f7;
+  color: #1c1e21;
+}
+.app {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background: #1f2430;
+  color: #fff;
+  padding: 16px 0;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+.sidebar h1 {
+  font-size: 16px;
+  padding: 0 16px 12px;
+  margin: 0 0 8px;
+  border-bottom: 1px solid #333a4a;
+}
+.sidebar ul { list-style: none; margin: 0; padding: 0; }
+.sidebar li {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+}
+.sidebar li:hover { background: #2a3040; }
+.sidebar li.active { background: #2f3648; border-left-color: #4f8cff; }
+
+.content {
+  flex: 1;
+  padding: 28px 36px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.panel h2 { margin-top: 0; }
+.panel p.desc { color: #555; margin-bottom: 20px; }
+
+.dropzone {
+  border: 2px dashed #b7bccb;
+  border-radius: 8px;
+  padding: 28px;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+  margin-bottom: 16px;
+  background: #fff;
+}
+.dropzone.dragover { border-color: #4f8cff; background: #eef4ff; }
+
+.file-list { list-style: none; padding: 0; margin: 0 0 16px; }
+.file-list li {
+  background: #fff;
+  border: 1px solid #e1e3e8;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.file-list li button {
+  background: none; border: none; color: #c0392b; cursor: pointer; font-size: 13px;
+}
+
+label { display: block; font-size: 13px; margin: 12px 0 4px; font-weight: 600; }
+input[type=text], input[type=number], select {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button.primary {
+  margin-top: 20px;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+button.primary:hover { background: #3d78e6; }
+button.primary:disabled { background: #a9bede; cursor: not-allowed; }
+
+.status {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #333;
+  min-height: 18px;
+}
+.status.error { color: #c0392b; }
+.status.success { color: #1e8e3e; }

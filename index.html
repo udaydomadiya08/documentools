@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Toolkit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <nav class="sidebar">
+      <h1>PDF Toolkit</h1>
+      <ul id="toolList">
+        <li data-tool="merge" class="active">Merge PDF</li>
+        <li data-tool="split">Split PDF (per page)</li>
+        <li data-tool="rotate">Rotate Pages</li>
+        <li data-tool="remove">Remove Pages</li>
+        <li data-tool="extract">Extract Pages</li>
+        <li data-tool="reorder">Reorder Pages</li>
+        <li data-tool="crop">Crop PDF</li>
+        <li data-tool="page-size">Change Page Size</li>
+        <li data-tool="n-up">Pages per Sheet</li>
+        <li data-tool="images-to-pdf">Images to PDF</li>
+        <li data-tool="pdf-to-images">PDF to Images</li>
+        <li data-tool="convert-image">Convert Image Format</li>
+        <li data-tool="watermark">Add Watermark</li>
+        <li data-tool="page-numbers">Add Page Numbers</li>
+        <li data-tool="redact">Redact PDF (visual)</li>
+        <li data-tool="metadata">Edit Metadata</li>
+        <li data-tool="bookmarks">Add Bookmarks</li>
+        <li data-tool="fill-form">Fill Out PDF</li>
+        <li data-tool="create-form">Create Fillable Form</li>
+        <li data-tool="flatten">Flatten Form</li>
+        <li data-tool="compare">Compare PDFs</li>
+        <li data-tool="repair">Repair PDF</li>
+        <li data-tool="text-to-pdf">Text to PDF</li>
+        <li data-tool="webpage-to-pdf">Webpage to PDF</li>
+        <li data-tool="qr-code">Generate QR Code</li>
+        <li data-tool="generate-password">Generate Password</li>
+        <li data-tool="view-pdf">View PDF</li>
+        <li data-tool="office-convert">Office &rarr; PDF (LibreOffice)</li>
+        <li data-tool="ocr">OCR PDF (extract text)</li>
+      </ul>
+    </nav>
+    <main class="content">
+      <div id="panels"></div>
+      <div id="status" class="status"></div>
+    </main>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

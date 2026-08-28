@@ -1,0 +1,7 @@
+node_modules/
+release/
+*.pdf
+automated-test-results/
+test-*.js
+create-test-files.js
+generate-test-outputs.js

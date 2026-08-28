@@ -1,0 +1,69 @@
+{
+  "name": "pdf-toolkit-desktop",
+  "version": "1.0.0",
+  "description": "Cross-platform PDF toolkit desktop app (Mac, Linux, Windows)",
+  "main": "main.js",
+  "author": "You",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac --linux --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux",
+    "dist:win": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.yourname.pdftoolkit",
+    "productName": "PDF Toolkit",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "renderer.js",
+      "worker.js",
+      "pdf-ops.js",
+      "styles.css",
+      "node_modules/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/pdfjs-dist/legacy/build/pdf.worker.js",
+      "node_modules/tesseract.js/**/*",
+      "node_modules/canvas/**/*"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Office"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3",
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.62.1"
+  },
+  "dependencies": {
+    "diff": "^5.2.0",
+    "jszip": "^3.10.1",
+    "pdfjs-dist": "^3.11.174",
+    "qrcode": "^1.5.3",
+    "tesseract.js": "^5.1.0"
+  }
+}
