@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Cross-platform PDF toolkit desktop app (Mac, Linux, Windows)",
   "main": "main.js",
-  "author": "You",
+  "author": {
+    "name": "Uday Domadiya",
+    "email": "udaydomadiya08@gmail.com"
+  },
   "license": "MIT",
   "scripts": {
     "start": "electron .",
@@ -49,7 +52,8 @@
       "target": [
         "nsis"
       ]
-    }
+    },
+    "publish": null
   },
   "devDependencies": {
     "@playwright/test": "^1.62.1",
