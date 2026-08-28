@@ -3,6 +3,20 @@
 A cross-platform desktop PDF toolkit built with Electron. Everything runs
 **locally on your machine** — no files are ever uploaded anywhere.
 
+## Download
+
+Get the latest release for your platform from [**GitHub Releases**](https://github.com/udaydomadiya08/documentools/releases/tag/v1.0.0):
+
+| Platform | File | Download |
+|----------|------|----------|
+| **macOS** (Apple Silicon) | `PDF.Toolkit-1.0.0-arm64.dmg` | [Download](https://github.com/udaydomadiya08/documentools/releases/download/v1.0.0/PDF.Toolkit-1.0.0-arm64.dmg) |
+| **macOS** (ZIP) | `PDF.Toolkit-1.0.0-arm64-mac.zip` | [Download](https://github.com/udaydomadiya08/documentools/releases/download/v1.0.0/PDF.Toolkit-1.0.0-arm64-mac.zip) |
+| **Windows** | `PDF.Toolkit.Setup.1.0.0.exe` | [Download](https://github.com/udaydomadiya08/documentools/releases/download/v1.0.0/PDF.Toolkit.Setup.1.0.0.exe) |
+| **Linux** (AppImage) | `PDF.Toolkit-1.0.0.AppImage` | [Download](https://github.com/udaydomadiya08/documentools/releases/download/v1.0.0/PDF.Toolkit-1.0.0.AppImage) |
+| **Linux** (Debian/Ubuntu) | `pdf-toolkit-desktop_1.0.0_amd64.deb` | [Download](https://github.com/udaydomadiya08/documentools/releases/download/v1.0.0/pdf-toolkit-desktop_1.0.0_amd64.deb) |
+
+> **Note:** The app is not code-signed. macOS will show an "unidentified developer" warning — right-click the app and select Open to bypass it.
+
 ## Tools included (29)
 
 **Page operations:** Merge, Split (per page), Rotate, Remove pages, Extract
