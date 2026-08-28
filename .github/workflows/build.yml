@@ -30,8 +30,14 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install Linux dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpixman-1-dev libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
       - name: Install dependencies
-        run: npm install
+        run: npm install --ignore-optional
 
       - name: Build installer
         run: npm run ${{ matrix.script }}
@@ -52,6 +58,8 @@ jobs:
     needs: build
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
@@ -64,3 +72,5 @@ jobs:
           files: artifacts/**/*
           draft: false
           generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
